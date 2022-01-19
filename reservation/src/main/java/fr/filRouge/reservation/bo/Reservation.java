@@ -24,13 +24,11 @@ public class Reservation {
 	@ManyToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "seanceid", foreignKey = @ForeignKey(name = "real_FK"))
 	private Seance seance;
-	private Integer nbResevation;
 
 	// constructeur sans Id
 	public Reservation(Seance seance, Integer nbResevation) {
 		super();
 		this.seance = seance;
-		this.nbResevation = nbResevation;
 
 	}
 

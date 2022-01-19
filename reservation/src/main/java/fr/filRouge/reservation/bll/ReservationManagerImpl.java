@@ -24,7 +24,7 @@ public class ReservationManagerImpl implements ReservationManager {
 
 	@Override
 	public void addReservation(Reservation reservation) {
-		// TODO Auto-generated method stub
+		reservationdao.save(reservation);
 
 	}
 
@@ -35,20 +35,20 @@ public class ReservationManagerImpl implements ReservationManager {
 	}
 
 	@Override
-	public Module getReservationById(Integer id) {
-		// TODO Auto-generated method stub
-		return null;
+	public Reservation getReservationById(Integer id) {
+
+		return reservationdao.findById(id).orElse(null);
 	}
 
 	@Override
 	public void delReservationById(Integer id) {
-		// TODO Auto-generated method stub
+		reservationdao.deleteById(id);
 
 	}
 
 	@Override
 	public void modReservation(Reservation reservation) {
-		// TODO Auto-generated method stub
+		reservationdao.save(reservation);
 
 	}
 

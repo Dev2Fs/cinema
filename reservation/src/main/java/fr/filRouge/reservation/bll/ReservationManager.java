@@ -12,7 +12,7 @@ public interface ReservationManager {
 
 	public List<Reservation> getAllReservation();
 
-	public Module getReservationById(Integer id);
+	public Reservation getReservationById(Integer id);
 
 	public void delReservationById(Integer id);
 
