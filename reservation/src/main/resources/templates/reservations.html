@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Liste des reservations</title>
+</head>
+<body>
+
+	<h1>Liste des reservations</h1>
+
+	<div th:each="reservation : ${reservations}">
+		<h6>Id reservation</h6>
+		<p th:text="${reservation.id}"></p>
+		<h6>Nom du film</h6>
+		<p th:text="${reservation.seance.film.film}"></p>
+		<h6>Nom de la salle</h6>
+		<p th:text="${reservation.seance.salle.salle}"></p>
+		<a th:href="@{/delete/{id}(id=${reservation.id})}">Effacer
+			reservation</a>
+		<hr>
+
+	</div>
+	<!-- 	<form action="#" th:action="@{/add}" th:object="${reservation}" -->
+	<!-- 		method="post"> -->
+	<!-- 		<!--         <input type="number" id="seanceid" th:field="*{id_seance}" /> -->
+	-->
+	<!-- 		<select name="idseance" id="idseance"> -->
+	<!-- 			<option th:each="seance : ${seances}" th:value="${seance.id}" -->
+	<!-- 				th:text="${seance.id}"></option> -->
+	<!-- 		</select> <input type="submit" value="ajouter" /> -->
+	<!-- 	</form> -->
+</body>
+</html>

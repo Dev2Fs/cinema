@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Reservation par idseance</title>
+</head>
+<body>
+    <h1>Faire une reservation par seance</h1>
+
+    <form action="#" th:action="@{/add}" th:object="${reservation}"
+        method="post">
+        <!--         <input type="number" id="seanceid" th:field="*{id_seance}" /> -->
+        <select name="idseance" id="idseance">
+            <option th:each="seance : ${seances}" th:value="${seance.id}" th:text="${seance.id}"></option>
+        </select>
+        <input type="submit" value="ajouter" />
+    </form>
+
+    <!--     <div th:each="seance : ${seances}"> -->
+    <!--         <p th:text="${seance.id}"></p> -->
+    <!--     </div> -->
+
+</body>
+</html>

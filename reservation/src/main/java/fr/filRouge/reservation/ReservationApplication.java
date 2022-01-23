@@ -6,7 +6,6 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import fr.filRouge.reservation.bll.ReservationManager;
-import fr.filRouge.reservation.bo.Reservation;
 
 @SpringBootApplication
 public class ReservationApplication implements CommandLineRunner {
@@ -21,8 +20,8 @@ public class ReservationApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 
-		Reservation premiereReservation = new Reservation();
-		reservationManager.addReservation(premiereReservation);
+//		Reservation premiereReservation = new Reservation();
+//		reservationManager.addReservation(premiereReservation);
 
 	}
 

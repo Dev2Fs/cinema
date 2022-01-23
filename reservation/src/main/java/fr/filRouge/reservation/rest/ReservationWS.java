@@ -15,11 +15,11 @@ public class ReservationWS {
 	@Autowired
 	private ReservationManager reservationManager;
 
-//	@GetMapping("/films")
-//	public List<Film> getAllFilm() {
-//		return reservationManager.getAllFilm();
-
-	@GetMapping("/reservations")
+////	@GetMapping("/films")
+////	public List<Film> getAllFilm() {
+////		return reservationManager.getAllFilm();
+//
+	@GetMapping("/reservation")
 	public List<Reservation> getAllReservation() {
 		return reservationManager.getAllReservation();
 

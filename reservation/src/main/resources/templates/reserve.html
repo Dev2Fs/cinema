@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>Liste des reservations de la seance</h1>
+	<a href="/index">Accueil</a>
+	<p>Places restantes</p>
+	<p th:text="${seance.salle.capacite} - ${nombre}"></p>
+	<div th:each="reserve : ${reserves}">
+		<h6>Id seance</h6>
+		<p th:text="${reserve.id}"></p>
+		<hr>
+	</div>
+</body>
+</html>
+

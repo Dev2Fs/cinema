@@ -1,8 +1,6 @@
 package fr.filRouge.reservation.bo;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.ForeignKey;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
@@ -21,12 +19,12 @@ public class Reservation {
 	@Id
 	@GeneratedValue
 	private Integer id;
-	@ManyToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name = "seanceid", foreignKey = @ForeignKey(name = "real_FK"))
+	@ManyToOne
+	@JoinColumn(name = "seanceid")
 	private Seance seance;
 
 	// constructeur sans Id
-	public Reservation(Seance seance, Integer nbResevation) {
+	public Reservation(Seance seance) {
 		super();
 		this.seance = seance;
 
